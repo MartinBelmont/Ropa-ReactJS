@@ -1,19 +1,13 @@
 import React from 'react';
 import './NavBar.css';
-import './Admin.jpg';
 
 function NavBar() {
     return (
+    <div className="menuComp">
         <div className="navbar">
-
-        <link rel="preconnect" href="https://fonts.googleapis.com"></link>
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin></link>
-        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;700&display=swap" rel="stylesheet"></link>
-        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet"/>
-
             <div class="menuBarra cierre">
                 <div class="logo-prop">
-                    <img src="" alt="Logo"></img>
+                    <img src="/images/Logo.jpg" alt="Logo"></img>
                     <span class="logo_nomb">FlywareLabs</span>
                 </div>    
             <ul class="nav-links">
@@ -70,7 +64,7 @@ function NavBar() {
             <li>
                 <div class="profile-details">
                     <div class="profile-content">
-                        <img src="Admin.jpg" alt="User"></img>
+                        <img src="/images/Admin.jpg" alt="User"></img>
                     </div>
                     <div class="name-job">
                         <div class="profile_name">Alvaro Barros</div>
@@ -82,6 +76,7 @@ function NavBar() {
             </ul>
             </div>
         </div>
+    </div>
     )
 }
 
