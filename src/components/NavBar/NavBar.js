@@ -1,5 +1,6 @@
 import React from 'react';
 import './NavBar.css';
+import Card from './CartWidget';
 
 function NavBar() {
     return (
@@ -38,7 +39,7 @@ function NavBar() {
             <li>
                 <div class="icon-link">
                     <a href="#">
-                        <i class="fas fa-cart-arrow-down"></i>
+                        <Card/>
                         <span class="link_name">Mis Compras</span>
                     </a>
                     <i class="fas fa-chevron-down arrow"></i>

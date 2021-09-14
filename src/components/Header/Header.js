@@ -1,4 +1,6 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
+import Counter from './ItemCount';
+import './HeaderStyle.css';
 
 export default class Header extends Component {
     render() {
@@ -10,6 +12,7 @@ export default class Header extends Component {
                         <span class="text">Ropa EliBel</span>
                     </div>
                 </section>
+                <div id="counter"><Counter/></div>
             </div>
         )
     }

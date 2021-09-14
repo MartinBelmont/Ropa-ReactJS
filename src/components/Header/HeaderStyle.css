@@ -1,0 +1,18 @@
+button{
+    margin: 1rem;
+    border: none;
+    background-color: #e8aff0;
+    box-shadow: 0px 0px 7px gray;
+    font-weight: bold;
+    font-size: 2rem;
+    color: inherit;
+    border-radius: 50%;
+    height: 3rem;
+    width: 3rem;
+    cursor: pointer;
+    outline: none;
+    transition: background-color 250ms ease-in-out, transform 50ms ease-in-out;
+}
+button:hover{
+    background-color: #dc6aeb;
+}
