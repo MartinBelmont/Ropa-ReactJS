@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Counter from './ItemCount';
+import ItemList from './ItemList';
 import './HeaderStyle.css';
 
 export default class Header extends Component {
@@ -12,7 +13,8 @@ export default class Header extends Component {
                         <span class="text">Ropa EliBel</span>
                     </div>
                 </section>
-                <div id="counter"><Counter/></div>
+                <div id="counter"><Counter stock = {5} initial = {1} /></div>
+                <div id="ItemsList"><ItemList/></div>
             </div>
         )
     }

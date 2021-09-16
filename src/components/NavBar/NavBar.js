@@ -5,7 +5,7 @@ import Card from './CartWidget';
 function NavBar() {
     return (
     <div className="menuComp">
-        <div className="navbar">
+        <div id="navbar">
             <div class="menuBarra cierre">
                 <div class="logo-prop">
                     <img src="/images/Logo.jpg" alt="Logo"></img>
