@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import Counter from './ItemCount';
-import ItemList from './ItemList';
+import ItemList from '../ItemList/ItemList';
 import './HeaderStyle.css';
 
-export default class Header extends Component {
+export default class ItemListContainer extends Component {
     render() {
         return (
             <div>

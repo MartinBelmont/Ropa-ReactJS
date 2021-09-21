@@ -9,7 +9,7 @@ function NavBar() {
             <div class="menuBarra cierre">
                 <div class="logo-prop">
                     <img src="/images/Logo.jpg" alt="Logo"></img>
-                    <span class="logo_nomb">FlywareLabs</span>
+                    <span class="logo_nomb">EliBel</span>
                 </div>    
             <ul class="nav-links">
                 <li>
@@ -68,7 +68,7 @@ function NavBar() {
                         <img src="/images/Admin.jpg" alt="User"></img>
                     </div>
                     <div class="name-job">
-                        <div class="profile_name">Alvaro Barros</div>
+                        <div class="profile_name">Martin Belizan</div>
                         <div class="job">Admin</div>
                     </div>
                     <i class="fas fa-sign-out-alt"></i>

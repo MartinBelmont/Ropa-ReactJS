@@ -1,0 +1,57 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none; 
+}
+
+
+.titulos--1 h2 {
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    background-color: #260035;
+    border-radius: 10px;
+    margin: 20px;
+}
+
+.cardflexrow {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-evenly;
+    text-align: center;
+    padding: 0px;
+    margin: 0;
+    flex-wrap: wrap; 
+}
+  
+.cardflexrow--transicion {
+    width: 200px;
+    overflow: hidden;
+    border-radius: 20px;
+    box-shadow: 1px 5px 15px grey;
+    text-align: center;
+    margin: 0; 
+    background: #e8aff0;
+    margin-right: 30px;
+}
+
+
+.cardflexrow--transicion img {
+    max-width: 200px;
+    max-height: 300px;
+    vertical-align: middle;
+    transition: all 0.5s ease; 
+}
+
+/*HOVER*/
+.cardflexrow--transicion:hover {
+    box-shadow: 1px 5px 20px grey;
+}
+
+
+.cardflexrow--transicion:hover img {
+    transform: scale(1.1);
+    border-radius: 20px; 
+}
