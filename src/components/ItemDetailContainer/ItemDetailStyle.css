@@ -6,14 +6,25 @@
 }
 
 
-.titulos--1 h2 {
+.titulos--2 h2 {
     color: white;
     font-size: 20px;
     font-weight: bold;
     text-align: center;
     background-color: #260035;
-    border-radius: 10px;
     margin: 20px;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+h2 .texto{
+    display: flex;
+    color: white;
+    font-size: 15px;
+    font-weight: normal;
+    text-align: center;
+    background-color: #260035;
+    margin: 5px;
 }
 
 .cardflexrow {
@@ -26,8 +37,8 @@
     flex-wrap: wrap; 
 }
   
-.cardflexrow--transicion {
-    width: 200px;
+.cardflexrow--transicion-2 {
+    width: 250px;
     overflow: hidden;
     border-radius: 20px;
     box-shadow: 1px 5px 15px grey;
@@ -38,20 +49,20 @@
 }
 
 
-.cardflexrow--transicion img {
-    max-width: 200px;
+.cardflexrow--transicion-2 img {
+    max-width: 250px;
     max-height: 300px;
     vertical-align: middle;
     transition: all 0.5s ease; 
 }
 
 /*HOVER*/
-.cardflexrow--transicion:hover {
+.cardflexrow--transicion-2:hover {
     box-shadow: 1px 5px 20px grey;
 }
 
 
-.cardflexrow--transicion:hover img {
+.cardflexrow--transicion-2:hover img {
     transform: scale(1.1);
     border-radius: 20px; 
 }

@@ -215,32 +215,3 @@
 .menuBarra .profile-details .job{
     font-size: 12px;
 }
-.home-section{
-    position: relative;
-    background: #efe6ff;
-    height: 7vh;
-    left: 300px;
-    width: calc(100% - 300px);
-    transition: all 0.5s ease;
-}
-.menuBarra.cierre ~ .home-section{
-    left: 78px;
-    width: calc(100% - 78px);
-}
-.home-section .home-content{
-    height: 60px;
-    display: flex;
-    align-items: center;
-}
-.home-section .home-content .fa-bars, .home-section .home-content .text{
-    color: #260035;
-    font-size: 29px;
-}
-.home-section .home-content .fa-bars{
-    margin: 0 15px;
-    cursor: pointer;
-}
-.home-section .home-content .text{
-    font-size: 26px;
-    font-weight: 700;
-}

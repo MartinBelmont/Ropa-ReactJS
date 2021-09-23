@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
-import Counter from './ItemCount';
+import Counter from '../Counter/ItemCount';
 import ItemList from '../ItemList/ItemList';
+import ItemDetailList from '../ItemDetailContainer/ItemDetailList.jsx';
 import './HeaderStyle.css';
 
 export default class ItemListContainer extends Component {
@@ -13,8 +14,8 @@ export default class ItemListContainer extends Component {
                         <span class="text">Ropa EliBel</span>
                     </div>
                 </section>
-                <div id="counter"><Counter stock = {5} initial = {1} /></div>
                 <div id="ItemsList"><ItemList/></div>
+                <div id="ItemsList"><ItemDetailList/></div>
             </div>
         )
     }

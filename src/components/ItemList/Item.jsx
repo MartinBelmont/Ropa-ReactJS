@@ -1,4 +1,5 @@
 import React from 'react';
+import Counter from '../Counter/ItemCount';
 import './ItemStyle.css';
 
 const Item = (props) => {
@@ -11,6 +12,7 @@ const Item = (props) => {
                         <h2> Producto: {props.product.name}</h2>
                         <h2> Stock: {props.product.stock}</h2>
                         <h2> Precio: {props.product.price}</h2>
+                        <div id="counter"><Counter stock = {props.product.stock} initial = {1} /></div>
                     </div>
                  </div>
             </div>

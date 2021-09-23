@@ -1,7 +1,9 @@
 button{
-    margin: 1rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    margin-bottom: 15px;
     border: none;
-    background-color: #e8aff0;
+    background-color: #efe6ff;
     box-shadow: 0px 0px 7px gray;
     font-weight: bold;
     font-size: 2rem;
@@ -15,4 +17,36 @@ button{
 }
 button:hover{
     background-color: #dc6aeb;
+}
+.app h1{
+    font-size: 26px;
+    font-weight: bold;
+}
+.home-section{
+    position: relative;
+    background: #efe6ff;
+    height: 7vh;
+    left: 78px;
+    transition: all 0.5s ease;
+}
+.menuBarra.cierre ~ .home-section{
+    left: 78px;
+    width: calc(100% - 78px);
+}
+.home-section .home-content{
+    height: 60px;
+    display: flex;
+    align-items: center;
+}
+.home-section .home-content .fa-bars, .home-section .home-content .text{
+    color: #260035;
+    font-size: 29px;
+}
+.home-section .home-content .fa-bars{
+    margin: 0 15px;
+    cursor: pointer;
+}
+.home-section .home-content .text{
+    font-size: 26px;
+    font-weight: 700;
 }
