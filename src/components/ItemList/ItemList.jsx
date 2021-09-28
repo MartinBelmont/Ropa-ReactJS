@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import Item from './Item';
+import { NavLink } from 'react-router-dom';
 
 const ItemList = () => {
 
@@ -34,6 +35,7 @@ const ItemList = () => {
             {
                 localItems !== [] && localItems.map((item) => (
                     <div>
+                        {/* <NavLink to={'/item/:id'}><Item product={item}/></NavLink> */}
                         <Item product={item}/>
                     </div>
                 ))

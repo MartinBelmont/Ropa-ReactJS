@@ -3,6 +3,7 @@ import Counter from '../Counter/ItemCount';
 import ItemList from '../ItemList/ItemList';
 import ItemDetailList from '../ItemDetailContainer/ItemDetailList.jsx';
 import './HeaderStyle.css';
+import { BrowserRouter, Switch, Route } from 'react-router-dom';
 
 export default class ItemListContainer extends Component {
     render() {
@@ -15,7 +16,6 @@ export default class ItemListContainer extends Component {
                     </div>
                 </section>
                 <div id="ItemsList"><ItemList/></div>
-                <div id="ItemsList"><ItemDetailList/></div>
             </div>
         )
     }

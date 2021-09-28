@@ -1,16 +1,17 @@
 import React from 'react';
 import './NavBar.css';
 import Card from './CartWidget';
+import { Link } from 'react-router-dom';
 
 function NavBar() {
     return (
     <div className="menuComp">
         <div id="navbar">
             <div class="menuBarra cierre">
-                <div class="logo-prop">
+                <Link to={'/'}><div class="logo-prop">
                     <img src="/images/Logo.jpg" alt="Logo"></img>
                     <span class="logo_nomb">EliBel</span>
-                </div>    
+                </div></Link>    
             <ul class="nav-links">
                 <li>
                     <a href="#">
@@ -31,11 +32,11 @@ function NavBar() {
                 </div>
                 <ul class="sub-menu">
                     <li><a class="link_name" href="#">Remeras y más</a></li>
-                    <li><a href="#">Remeras</a></li>
-                    <li><a href="#">Pantalones</a></li>
-                    <li><a href="#">Accesorios</a></li>                     
+                    <Link to={'/category/:categoryId'}><li><a href="#">Remeras</a></li></Link>
+                    <Link to={'/category/:categoryId'}><li><a href="#">Pantalones</a></li></Link>
+                    <Link to={'/category/:categoryId'}><li><a href="#">Accesorios</a></li></Link>                    
                 </ul>
-            </li>
+            </li> 
             <li>
                 <div class="icon-link">
                     <a href="#">
