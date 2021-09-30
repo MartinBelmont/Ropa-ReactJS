@@ -1,9 +1,10 @@
 import logo from './logo.svg';
 import './App.css';
 import NavBar from './components/NavBar/NavBar.jsx';
+import ItemDetailContainer from './pages/ItemDetailContainer.jsx';
 import ItemDetailList from './components/ItemDetailContainer/ItemDetailList.jsx';
 import ItemListContainer from './components/ItemListContainer/ItemListContainer.jsx';
-import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import { BrowserRouter, Switch, Route, Link } from 'react-router-dom';
 
 function App() {
   return (
@@ -11,15 +12,9 @@ function App() {
       <BrowserRouter>
         <NavBar/>
         <Switch>
-          <Route exact path="/">
-            <ItemListContainer/>
-          </Route>
-          <Route exact path="/category/:id">
-            <ItemListContainer/>
-          </Route>
-          <Route path="/item/:id">
-            <ItemDetailList/>
-          </Route>
+          <Route exact path="/" component={ItemListContainer}/>
+          <Route exact path="/category/:id" component={ItemListContainer}/>
+          <Route exact path="/item/:id" component={ItemDetailContainer}/>
         </Switch>
       </BrowserRouter>
     </div>

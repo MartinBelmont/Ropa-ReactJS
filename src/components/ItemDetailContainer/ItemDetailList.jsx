@@ -20,7 +20,7 @@ const ItemDetailList = () => {
             
             {   id: 2, 
                 name: 'Pantalon', 
-                detail: 4, 
+                detail: 'Babucha Morley de mujer con bolsillos delanteros, cordón y elástico en la cintura', 
                 price: '$700', 
                 stock: 4,
                 img: 'https://d368r8jqz0fwvm.cloudfront.net/18714-product_lg/pantalon-deportivo-de-mujer-belkis.jpg'
@@ -28,7 +28,7 @@ const ItemDetailList = () => {
 
             {   id: 3, 
                 name: 'Bolso', 
-                detail: 3, 
+                detail: 'Su cuero graneado y el detalle de tanzado y pompón de flecos crean un estilo único. La sofisticación está en la pureza y en el trabajo artesanal, sin perder su ocasión de uso diario.', 
                 price: '$1000',
                 stock: 3, 
                 img: 'https://cyzone.tiendabelcorp.com/cdn-cgi/image/width=1200,fit=contain,f=auto/https://belc-bigdata-mdm-images-prd.s3.amazonaws.com/images/FotoProductoFondoBlancoWebRedes/210090649_fotofondoblanco.jpg'
@@ -46,12 +46,21 @@ const ItemDetailList = () => {
         //     .then((localItems) => setLocaItems(localItems))
         //     .catch((error) => console.log('Alto error bro${error.status}'));
 
-        const filterProducts = items.filter(products => products.id === 1)
-
+        // const filterProducts = items.filter(products => products.id === 1)
+        
+        // const { UserId } = useParams();
+        // useEffect(() => {
+        //     console.log('La Id es: ', userId);
+        //     return () => {
+        //         console.log('La Id es: ', userId);
+        //     }
+        // }, [UserId])
+        
         const getItems = (products) => {
             return new Promise((resolve, reject) => {
                 setTimeout(() => {
-                    resolve(filterProducts)
+                    // resolve(filterProducts)
+                    resolve(products)
                 }, 2000)
             })
         }
@@ -67,7 +76,7 @@ const ItemDetailList = () => {
             {
                 localItems !== [] && localItems.map((item) => (
                     <div>
-                        <Item product={item}/>
+                        <Item product={item} productId ={item.id}/>
                     </div>
                 ))
             }

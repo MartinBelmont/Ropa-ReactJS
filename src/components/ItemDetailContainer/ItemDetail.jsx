@@ -1,6 +1,7 @@
 import React from 'react';
 import Counter from '../Counter/ItemCount';
 import './ItemDetailStyle.css';
+import { Link } from 'react-router-dom';
 
 const Item = (props) => {
     return(
