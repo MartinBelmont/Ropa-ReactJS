@@ -10,11 +10,12 @@ const Item = ({product}) => {
 
     const {addItem, cart} = useContext(CartContext)
 
-    const onAdd = () => {
+    const onAdd = (quantity) => {
         setToBuy(true)
-        addItem(product)
+        addItem({...product, quantity: quantity})
     }
     console.log(cart)
+    
     if(!product.id) {
 
         return (
@@ -31,7 +32,7 @@ const Item = ({product}) => {
                         <div class="cardflexrow--titles">
                             <h2> Producto: {product?.name}</h2>
                             <h2> <span class="texto">{product?.detail}</span></h2>
-                            <h2> Precio: {product?.price}</h2>
+                            <h2> Precio: $ {product?.price}</h2>
                             {   
                                 !toBuy ?
 

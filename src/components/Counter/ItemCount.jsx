@@ -11,16 +11,21 @@ function Counter({stock, initial, onAdd}) {
     if (count == (initial-1)){
         setCount(initial);
     }
+    const carritoAct = () =>  {
+        onAdd(count)
+        setCount(initial)
+    }
+
     if(stock > 0) {
         return(
             <div className="app">
                 <h1>{count}</h1>
                 <div className="button-wrapper">
-                    <button onClick = { ()=> setCount(count-1) }>-</button>
-                    <button onClick = { ()=> setCount(count+1) }>+</button>
+                    <button onClick = { () => setCount(count-1) }>-</button>
+                    <button onClick = { () => setCount(count+1) }>+</button>
                 </div>
                 <div className="button-sell">
-                    <button onClick = {onAdd}>Comprar</button>
+                    <button onClick = {carritoAct}>Comprar</button>
                 </div>
             </div>
         )

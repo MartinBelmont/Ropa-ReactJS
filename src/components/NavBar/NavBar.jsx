@@ -17,7 +17,7 @@ const NavBar = () => {
                     <span class="logo_nomb">EliBel</span>
                 </div></Link>    
             <ul class="nav-links">
-                <li>
+                <Link to={'/'}><li>
                     <a href="#">
                         <i class="fas fa-border-all"></i>
                         <span class="link_name">Dashboard</span>
@@ -25,7 +25,16 @@ const NavBar = () => {
                     <ul class="sub-menu blank">
                         <li><a class="link_name" href="#">Menu</a></li>                
                     </ul>
+                </li></Link> 
+                <li>
+                <Link to='/cart' className='align-items-center p-0'>
+                <i class="fas fa-cart-arrow-down">
+                {
+                    cart.length !== 0 && <span className="h5 mx-1">{cart.length}</span>
+                }</i>
+                </Link>
                 </li>
+
             <li>
                 <div class="icon-link">
                     <a href="#">
@@ -41,14 +50,6 @@ const NavBar = () => {
                     <Link to={'/category/:categoryId'}><li><a href="#">Accesorios</a></li></Link>                    
                 </ul>
             </li>
-            
-            <Link to='/cart' className='d-flex align-items-center p-2 bg-light'>
-                <i class="fas fa-cart-arrow-down"></i>
-                {
-                    cart.length !== 0 && <span className="h2 mx-1">{cart.length}</span>
-                }
-            </Link>
-
             <li>
                 <div class="icon-link">
                     <a href="#">

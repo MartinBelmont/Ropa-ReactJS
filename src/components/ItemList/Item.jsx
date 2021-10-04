@@ -13,7 +13,7 @@ const Item = (props) => {
                     <div class="cardflexrow--titles">
                         <h2> Producto: {props.product.name}</h2>
                         <h2> Stock: {props.product.stock}</h2>
-                        <h2> Precio: {props.product.price}</h2>
+                        <h2> Precio: $ {props.product.price}</h2>
                     </div>
                  </div>
             </div>
