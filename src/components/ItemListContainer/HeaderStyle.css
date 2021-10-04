@@ -1,4 +1,4 @@
-button{
+.button-wrapper button{
     margin-left: 1rem;
     margin-right: 1rem;
     margin-bottom: 15px;
@@ -15,8 +15,28 @@ button{
     outline: none;
     transition: background-color 250ms ease-in-out, transform 50ms ease-in-out;
 }
-button:hover{
+.button-wrapper button:hover{
     background-color: #dc6aeb;
+}
+.button-sell button{
+    margin-left: 1rem;
+    margin-right: 1rem;
+    margin-bottom: 15px;
+    border: none;
+    background-color: #9afdc0;
+    box-shadow: 0px 0px 7px gray;
+    font-weight: bold;
+    font-size: 1rem;
+    border-radius: 15px;
+    color: inherit;
+    height: 3rem;
+    width: 7rem;
+    cursor: pointer;
+    outline: none;
+    transition: background-color 250ms ease-in-out, transform 50ms ease-in-out;
+}
+.button-sell button:hover{
+    background-color: #6aeb70;
 }
 .app h1{
     font-size: 26px;

@@ -1,9 +1,13 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import './NavBar.css';
 import Card from './CartWidget';
 import { Link } from 'react-router-dom';
+import { CartContext } from '../../context/CartContext';
 
-function NavBar() {
+const NavBar = () => {
+
+    const {cart} = useContext(CartContext)
+
     return (
     <div className="menuComp">
         <div id="navbar">
@@ -36,21 +40,15 @@ function NavBar() {
                     <Link to={'/category/:categoryId'}><li><a href="#">Pantalones</a></li></Link>
                     <Link to={'/category/:categoryId'}><li><a href="#">Accesorios</a></li></Link>                    
                 </ul>
-            </li> 
-            <li>
-                <div class="icon-link">
-                    <a href="#">
-                        <Card/>
-                        <span class="link_name">Mis Compras</span>
-                    </a>
-                    <i class="fas fa-chevron-down arrow"></i>
-                </div>
-                <ul class="sub-menu">
-                    <li><a class="link_name" href="#">Mis Compras</a></li>
-                    <li><a href="#">Compras</a></li>
-                    <li><a href="#">Favoritos</a></li>                
-                </ul>
             </li>
+            
+            <Link to='/cart' className='d-flex align-items-center p-2 bg-light'>
+                <i class="fas fa-cart-arrow-down"></i>
+                {
+                    cart.length !== 0 && <span className="h2 mx-1">{cart.length}</span>
+                }
+            </Link>
+
             <li>
                 <div class="icon-link">
                     <a href="#">

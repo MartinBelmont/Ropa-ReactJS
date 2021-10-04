@@ -5,8 +5,13 @@ import ItemDetailContainer from './pages/ItemDetailContainer.jsx';
 import ItemDetailList from './components/ItemDetailContainer/ItemDetailList.jsx';
 import ItemListContainer from './components/ItemListContainer/ItemListContainer.jsx';
 import { BrowserRouter, Switch, Route, Link } from 'react-router-dom';
+import { useContext } from 'react';
+import { CartContext } from './context/CartContext';
 
 function App() {
+
+  const {saludo} = useContext(CartContext)
+  
   return (
     <div className="App">
       <BrowserRouter>
