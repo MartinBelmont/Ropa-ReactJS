@@ -10,8 +10,6 @@ import { CartContext } from './context/CartContext';
 import CartContainer from './components/CartContainer/CartContainer';
 
 function App() {
-
-  const {saludo} = useContext(CartContext)
   
   return (
     <div className="App">

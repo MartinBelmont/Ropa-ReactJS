@@ -1,18 +1,54 @@
 import React, { useEffect, useState } from 'react';
 import Item from './Item';
 import { Link } from 'react-router-dom';
+import { getFirestore } from '../../firebase';
 
 const ItemList = () => {
 
     const [localItems, setLocaItems] = useState([]);
 
+    React.useEffect(() => {
+        const db = getFirestore();
+        const productsCollection = db.collection('items');
+
+       productsCollection
+       .get()
+       .then((querySnapshot) => {
+           if(querySnapshot.empty){
+               console.log('No hay productos')
+           } else {
+                setLocaItems(querySnapshot.docs.map((doc) => ({...doc.data() })));
+           }
+        })
+       .catch(() => {});
+
+    }, []);
+
     useEffect(() => {
 
-        const items = [
-            {id: 1, name: 'Remera', stock: 5, price: 800, img: 'https://d368r8jqz0fwvm.cloudfront.net/7573-product_lg/remera-de-mujer-pierce.jpg'},
-            {id: 2, name: 'Pantalon', stock: 4, price: 700, img: 'https://d368r8jqz0fwvm.cloudfront.net/18714-product_lg/pantalon-deportivo-de-mujer-belkis.jpg'},
-            {id: 3, name: 'Bolso', stock: 3, price: 1000, img: 'https://cyzone.tiendabelcorp.com/cdn-cgi/image/width=1200,fit=contain,f=auto/https://belc-bigdata-mdm-images-prd.s3.amazonaws.com/images/FotoProductoFondoBlancoWebRedes/210090649_fotofondoblanco.jpg'},
-        ]
+        // const items = [
+        //     {   
+        //         id: 1, 
+        //         name: 'Remera', 
+        //         stock: 5, 
+        //         price: 800, 
+        //         img: 'https://d368r8jqz0fwvm.cloudfront.net/7573-product_lg/remera-de-mujer-pierce.jpg'
+        //     },
+        //     {
+        //         id: 2, 
+        //         name: 'Pantalon', 
+        //         stock: 4, 
+        //         price: 700, 
+        //         img: 'https://d368r8jqz0fwvm.cloudfront.net/18714-product_lg/pantalon-deportivo-de-mujer-belkis.jpg'
+        //     },
+        //     {
+        //         id: 3, 
+        //         name: 'Bolso', 
+        //         stock: 3, 
+        //         price: 1000, 
+        //         img: 'https://cyzone.tiendabelcorp.com/cdn-cgi/image/width=1200,fit=contain,f=auto/https://belc-bigdata-mdm-images-prd.s3.amazonaws.com/images/FotoProductoFondoBlancoWebRedes/210090649_fotofondoblanco.jpg'
+        //     },
+        // ]
 
         //const filterProducts = items.filter(products => products.id === 1)
 
@@ -24,9 +60,9 @@ const ItemList = () => {
             })
         }
 
-        getItems(items)
-            .then(result => setLocaItems(result))
-            .catch(error => console.log(error))
+        // getItems(items)
+        //     .then(result => setLocaItems(result))
+        //     .catch(error => console.log(error))
 
     }, [])
 
