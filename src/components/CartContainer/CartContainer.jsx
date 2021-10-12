@@ -1,8 +1,57 @@
 import React, { useContext } from "react";
 import { CartContext } from "../../context/CartContext";
 import { Link } from 'react-router-dom';
+import { getFirestore } from "../../firebase";
+import firebase from 'firebase/compat/app';
+import 'firebase/compat/firestore';
 
 const CartContainer = () => {
+    const newOrder = {
+        buyer: {
+            name:"Martin",
+            phone: '01112345678',
+            email: "martinbelizan@gmail.com"
+        },
+        items: [
+            {
+                id: 1,
+                price: 800,
+                name: "Remera",
+            },
+            {
+                id: 2,
+                price: 700,
+                name: "Pantalon",
+            }
+        ],
+        total: 1500,
+        date: firebase.firestore.Timestamp.fromDate(new Date()),
+    };
+
+    // Id Autogenerado
+    const handleChekout = () => {
+        const db = getFirestore();
+        const ordersCollection = db.collection("orders");
+
+        ordersCollection
+        .doc("IDPersonalizado")
+        .set(newOrder)
+        .then((docRef) => console.log(docRef))
+        .catch((error) =>  console.log(error));
+
+        // endCart(product)
+    };
+
+    // Modificar Producto
+    const handleUpdate = () => {
+        const db = getFirestore();
+        const ordersCollection = db.collection("orders");
+        const productRef = ordersCollection.doc("IDPersonalizado");
+
+        productRef.update({price: 1700});
+        // productRef.delete();
+    };
+
     const {cart, deleteItem, endCart} = useContext(CartContext)
 
     if (cart.length === 0) {
@@ -38,13 +87,13 @@ const CartContainer = () => {
                     )
                 }
                 <h2 class="mt-3">Total: $ {cart.reduce((a,i) => a  + i.price * i.quantity, 0)}</h2>
-                {
-                    cart.map((product) => 
-                        <div className='mt-5'>
-                            <button className='btn btn-success' onClick={() => endCart(product)}>Terminar mi compra</button>
-                        </div>
-                    )
-                }
+                
+                <div className='mt-5'>
+                    <button className='btn btn-success' onClick={handleChekout}>Terminar mi compra</button>
+                </div>
+                <div className='mt-5'>
+                    <button className='btn btn-warning' onClick={handleUpdate}>Modificar mi compra</button>
+                </div>
             </div>
         )
     }

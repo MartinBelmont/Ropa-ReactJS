@@ -10,6 +10,7 @@ const ItemList = () => {
     React.useEffect(() => {
         const db = getFirestore();
         const productsCollection = db.collection('items');
+        // const productsCollection = db.collection('items').where('price', '>', 800);
 
        productsCollection
        .get()
@@ -46,7 +47,7 @@ const ItemList = () => {
         //         name: 'Bolso', 
         //         stock: 3, 
         //         price: 1000, 
-        //         img: 'https://cyzone.tiendabelcorp.com/cdn-cgi/image/width=1200,fit=contain,f=auto/https://belc-bigdata-mdm-images-prd.s3.amazonaws.com/images/FotoProductoFondoBlancoWebRedes/210090649_fotofondoblanco.jpg'
+        //         img: 'https://www.dexter.com.ar/on/demandware.static/-/Sites-dabra-catalog/default/dw25b35a61/products/TO_160885/TO_160885-1.JPG'
         //     },
         // ]
 
