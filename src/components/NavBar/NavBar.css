@@ -4,6 +4,48 @@
     box-sizing: border-box;
     font-family: 'Montserrat', sans-serif;
 }
+.banner{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(to bottom, #e8b8f1 0%, #a165c9 100%);;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: fadeInAnimation ease 3s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+@keyframes fadeInAnimation {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+.banner img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.4;
+}
+.banner .content{
+    position: relative;
+    max-width: 750px;
+    text-align: center;
+}
+.banner .content h2{
+    color: #fff;
+    font-size: 80px;
+}
+.banner .content p{
+    color: #fff;
+    font-size: 18px;
+}
 .menuBarra{
     position: fixed;
     top: 0;

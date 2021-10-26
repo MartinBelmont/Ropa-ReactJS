@@ -45,27 +45,15 @@ const NavBar = () => {
                 </div>
                 <ul class="sub-menu">
                     <li><a class="link_name" href="#">Remeras y más</a></li>
-                    <Link to={'/category/:categoryId'}><li><a href="#">Remeras</a></li></Link>
-                    <Link to={'/category/:categoryId'}><li><a href="#">Pantalones</a></li></Link>
-                    <Link to={'/category/:categoryId'}><li><a href="#">Accesorios</a></li></Link>                    
-                </ul>
-            </li>
-            <li>
-                <div class="icon-link">
-                    <a href="#">
-                        <i class="fas fa-percentage"></i>
-                        <span class="link_name">Descuentos</span>
-                    </a>
-                    <i class="fas fa-chevron-down arrow"></i>
-                </div>
-                <ul class="sub-menu">
-                    <li><a class="link_name" href="#">Descuentos</a></li>                 
+                    <Link to={'/item/1'}><li><a href="#">Remeras</a></li></Link>
+                    <Link to={'/item/2'}><li><a href="#">Pantalones</a></li></Link>
+                    <Link to={'/item/3'}><li><a href="#">Accesorios</a></li></Link>                    
                 </ul>
             </li>
             <li>
                 <div class="profile-details">
                     <div class="profile-content">
-                        <img src="/images/Admin.jpg" alt="User"></img>
+                        <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8d29tYW4lMjBwcm9maWxlfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&w=1000&q=80" alt="User"></img>
                     </div>
                     <div class="name-job">
                         <div class="profile_name">Martin Belizan</div>

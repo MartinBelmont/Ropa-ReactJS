@@ -6,9 +6,9 @@ const ItemDetailList = ({product}) => {
     return(
         <div className='mt-4 d-flex justify-content-center'>
             
-                    <div>
-                        <Item product={product} productId={product.id}/>
-                    </div>
+            <div>
+                <Item product={product} productId={product.id}/>
+            </div>
                 
         </div>
     )

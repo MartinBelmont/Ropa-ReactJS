@@ -57,7 +57,6 @@ const ItemDetailContainer = () => {
         <div>
             <section class="home-section">
                 <div class="home-content">
-                    <i class="fas fa-bars"></i>
                     <span class="text">Detalle de Producto</span>
                 </div>
             </section>

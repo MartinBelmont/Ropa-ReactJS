@@ -44,9 +44,8 @@
 }
 .home-section{
     position: relative;
-    background: #efe6ff;
+    background: #260035;
     height: 7vh;
-    left: 78px;
     transition: all 0.5s ease;
 }
 .menuBarra.cierre ~ .home-section{
@@ -59,8 +58,9 @@
     align-items: center;
 }
 .home-section .home-content .fa-bars, .home-section .home-content .text{
-    color: #260035;
+    color: #efe6ff;
     font-size: 29px;
+    margin-left: 95px;
 }
 .home-section .home-content .fa-bars{
     margin: 0 15px;
